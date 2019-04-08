@@ -482,12 +482,14 @@ bigrams_united %>%
   count(bigram, sort = TRUE)
 
 
+
 bigram_tf_idf <- bigrams_united %>%
   count(bigram)
 bigram_tf_idf <- bigram_tf_idf %>% filter(n>50)
 ggplot(aes(x = reorder(bigram, n), y=n), data=bigram_tf_idf) + 
   geom_col(fill = "skyblue") +
-  ggtitle("The Most Common bigrams in customer reviews from 2010 to date") + 
+ labs(title = "The Most Common bigrams in customer reviews from 2010 to date",
+       y = "Frequency", x="Word") + 
   coord_flip()
 
 
@@ -880,6 +882,20 @@ For both cases, the p-value of the tests were less than the significance level a
   
 # Findings
  
+Based on the results of the sentiment analysis, below **findings** were identified:
+
+<center><img src="findings.jpg" ></center>
+
++ There is an important increasing of the number of reviews starting 2014. In contrast, the sentiment score has had an increase but really slightly.
+
++ A support to explain the number of reviews as a result of more people taking the service, is the evolution of the revenues. It is clear an increasing of the revenues after 2014.
+
++ Although after testing the hypotheses, We can confirm that the Sentiment score is correlated to the Star rating, this relationship is low and can be evidenced by the boxplot chart.
+
++ As a result of using two lexicons: NRC and BING, We can mention how important is the food in this kind of service. Customers do not only consider the quality but also the waiting list for the reservations and for a direct access to the restaurants. 
+
++ The prior point can be also supported by the fact that the most common words and pairs of words within the customer reviews are: “food”, “time”, “dining”, “main dinning”, “specialty restaurants”, “time dining”, “drink package”.
+
 ```{r Findings1, eval=TRUE , warning = FALSE, message=FALSE}
 
 ```
