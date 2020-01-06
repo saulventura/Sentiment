@@ -1,0 +1,3 @@
+# Sentiment Analysis on Customer Reviews
+
+This project presents the results of an analytic process composed by a sentiment and correlation analyses. The process was executed on two datasets created using public data from customer reviews and financial performance available on Internet. The analyses are realized using R, a programming language for data analysis, statistical computing and visualization.
